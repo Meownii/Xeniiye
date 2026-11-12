@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#58b9df">
+  <title>Home — Website Preview</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="site-shell">
+    <header class="desktop-bar">
+      <span class="desktop-label"><i aria-hidden="true">✦</i> INFO DESK</span>
+      <span class="desktop-online"><i aria-hidden="true"></i> SYSTEM ONLINE</span>
+      <time id="taskbarClock" aria-label="Current time">--:--</time>
+    </header>
+
+    <div class="site-layout">
+      <nav class="icon-dock" aria-label="Main navigation">
+        <button class="dock-item selected" data-section="home" aria-label="Home"><span class="dock-icon monitor-icon"><i></i></span><small>home</small></button>
+        <button class="dock-item" data-section="about" aria-label="About"><span class="dock-icon folder-icon"><i></i></span><small>about</small></button>
+        <button class="dock-item" data-section="commissions" aria-label="Commissions"><span class="dock-icon camera-icon"><i></i></span><small>commissions</small></button>
+        <button class="dock-item" data-section="shop" aria-label="Shop"><span class="dock-icon bag-icon"><i></i></span><small>shop</small></button>
+        <button class="dock-item" data-section="tos" aria-label="Terms of service"><span class="dock-icon document-icon"><i></i></span><small>terms</small></button>
+        <button class="dock-item" data-section="contact" aria-label="Contact"><span class="dock-icon phone-icon"><img src="assets/89122.png" alt=""><i></i></span><small>contact</small></button>
+        <button class="dock-item" data-section="feedback" aria-label="Feedback"><span class="dock-icon feedback-icon"><i></i></span><small>feedback</small></button>
+      </nav>
+
+      <aside class="left-rail">
+        <section class="signal-module module">
+          <div class="module-head"><span>NOW PLAYING</span><span class="live-led"></span></div>
+          <div class="signal-screen"><span class="screen-title">AUDIO SIGNAL</span><div class="waveform"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>TRACK TITLE HERE</small></div>
+          <div class="knob-row"><span class="knob"></span><span class="knob"></span><span class="knob"></span><span class="meter">VOL<br>08</span></div>
+          <div class="rail-note"><b>ARTIST / ALBUM</b><span>music info goes here</span></div>
+        </section>
+        <section class="profile-module module">
+          <div class="module-head"><span>PROFILE</span><span>01</span></div>
+          <div class="phone-widget" aria-label="Character art shown inside a retro mobile phone"><div class="phone-frame"><div class="phone-screen-slot"><span>CHARACTER ART<br>GOES HERE</span><small>character.png</small></div><img src="assets/89122.png" alt="Decorated retro mobile phone frame"></div></div>
+          <p class="micro-placeholder">CHARACTER DISPLAY / IMAGE TO BE ADDED</p>
+        </section>
+        <div class="rail-chip"><span class="chip-dot"></span> CURRENTLY ONLINE</div>
+      </aside>
+
+      <section class="home-area" id="pageView">
+        <div class="main-toolbar"><span>⌂</span><span>FILE</span><span>EDIT</span><span>VIEW</span><span id="pagePath">HOME / MAIN PAGE</span><button id="replayIntro">REPLAY INTRO</button></div>
+
+        <section class="page-content active" data-page="home">
+          <section class="music-console module">
+            <div class="console-top"><span>✦ MEDIA PLAYER / DEMO MODE</span><div class="mini-eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div class="console-main"><div class="cd-player" aria-hidden="true"><span></span></div><div class="song-copy"><small>NOW PLAYING</small><strong>TRACK TITLE GOES HERE</strong><span>ARTIST NAME / ALBUM</span><div class="audio-track"><i></i></div></div><div class="transport"><button id="playToggle" aria-label="Pause music preview">Ⅱ</button><span>DEMO</span></div></div>
+          </section>
+          <section class="spectrum-module module" aria-labelledby="spectrumTitle">
+            <div class="module-head"><span id="spectrumTitle">GRAPHIC EQUALIZER</span><span class="spectrum-tools"><button id="resetSpectrum" type="button">RESET</button><button id="shuffleSpectrum" type="button">SHUFFLE</button></span></div>
+            <div class="spectrum-hint">DRAG THE SLIDERS TO SHAPE THE SPECTRUM</div>
+            <div class="spectrum-plot"><svg viewBox="0 0 320 92" preserveAspectRatio="none" role="img" aria-label="Interactive audio spectrum graph"><path class="plot-grid" d="M0 20H320 M0 43H320 M0 66H320 M40 0V92 M80 0V92 M120 0V92 M160 0V92 M200 0V92 M240 0V92 M280 0V92"/><polygon id="spectrumFill" points="0,78 46,78 91,78 137,78 183,78 229,78 274,78 320,78"/><polyline id="spectrumLine" points="0,46 46,46 91,46 137,46 183,46 229,46 274,46 320,46"/></svg></div>
+            <div class="spectrum-bands" aria-label="Equalizer controls">
+              <label><input type="range" min="0" max="100" value="48" data-band="0" aria-label="60 hertz band"><small>60</small></label>
+              <label><input type="range" min="0" max="100" value="62" data-band="1" aria-label="170 hertz band"><small>170</small></label>
+              <label><input type="range" min="0" max="100" value="42" data-band="2" aria-label="310 hertz band"><small>310</small></label>
+              <label><input type="range" min="0" max="100" value="70" data-band="3" aria-label="600 hertz band"><small>600</small></label>
+              <label><input type="range" min="0" max="100" value="54" data-band="4" aria-label="1 kilohertz band"><small>1K</small></label>
+              <label><input type="range" min="0" max="100" value="36" data-band="5" aria-label="3 kilohertz band"><small>3K</small></label>
+              <label><input type="range" min="0" max="100" value="66" data-band="6" aria-label="6 kilohertz band"><small>6K</small></label>
+              <label><input type="range" min="0" max="100" value="50" data-band="7" aria-label="12 kilohertz band"><small>12K</small></label>
+            </div>
+            <div class="spectrum-footer"><span>LOW</span><span>FREQUENCY RESPONSE / DEMO</span><span>HIGH</span></div>
+          </section>
+          <section class="home-window module">
+            <div class="window-head"><span>HOME / MAIN PAGE</span><span class="window-buttons"><i>−</i><i>□</i><i>×</i></span></div>
+            <div class="home-content"><div class="home-copy"><div class="overline">✦ HOME / INTRODUCTION ✦</div><h1>MAIN TITLE<br><em>GOES HERE</em></h1><p class="intro-placeholder">ADD A SHORT INTRODUCTION, SHOP DESCRIPTION, OR A MESSAGE FOR VISITORS.</p><div class="home-links"><span>SOCIAL LINK</span><span>SHOP UPDATE</span><span>MORE INFO</span></div></div><div class="hero-art large-art-slot"><span>MAIN BANNER / ART<br>GOES HERE</span><small>banner.png</small><b>NEW</b></div></div>
+            <div class="home-status"><span><i></i> SYSTEM READY</span><span>VISITOR MESSAGE / INFO</span></div>
+          </section>
+          <div class="content-row"><section class="text-module module"><div class="module-head"><span>ABOUT / INFO</span><span>PROFILE</span></div><h2>SECTION TITLE</h2><p>ADD A SHORT DESCRIPTION, IMPORTANT INFORMATION, OR A NOTE ABOUT THE SHOP.</p><div class="text-lines"><i></i><i></i><i></i></div></section><section class="update-module module"><div class="module-head"><span>LATEST UPDATE</span><span>02</span></div><small>DATE / MONTH / YEAR</small><h2>UPDATE TITLE GOES HERE</h2><p>ADD NEWS, NEW ITEMS, OR A SHORT ANNOUNCEMENT.</p><div class="update-lights"><i></i><i></i><i></i><span>MORE INFO</span></div></section></div>
+          <section class="mini-gallery"><div class="gallery-label">FEATURED WORK / IMAGES</div><div class="gallery-slots"><span>IMAGE 01</span><span>IMAGE 02</span><span>IMAGE 03</span></div></section>
+        </section>
+
+        <section class="page-content" data-page="about" hidden>
+          <div class="section-window module"><div class="window-head"><span>ABOUT ME / PROFILE FILE</span><span class="window-buttons"><i>−</i><i>□</i><i>×</i></span></div><div class="section-inner about-layout"><div class="portrait-slot large-art-slot">PROFILE ART / PORTRAIT<br>GOES HERE<small>profile.png</small></div><div><div class="page-heading about-heading"><div class="overline">✦ USER PROFILE / 01 ✦</div><h1>ABOUT <em>ME</em></h1></div><p class="section-lead">A LITTLE INTRODUCTION GOES HERE. ADD THE CREATOR’S BIO AND A FEW WORDS ABOUT THEIR WORK.</p><div class="info-grid"><div><small>NAME / ALIAS</small><strong>ADD NAME HERE</strong></div><div><small>PRONOUNS</small><strong>ADD PRONOUNS</strong></div><div><small>LOCATION</small><strong>ADD LOCATION</strong></div><div><small>STATUS</small><strong>ONLINE / OFFLINE</strong></div></div><div class="subpanel"><b>LIKES / INTERESTS</b><p>ADD INTERESTS, INSPIRATIONS, AND OTHER PERSONAL DETAILS HERE.</p></div></div></div></div>
+        </section>
+
+        <section class="page-content" data-page="commissions" hidden>
+          <div class="section-window module"><div class="window-head"><span>COMMISSIONS / SERVICE MENU</span><span class="window-buttons"><i>−</i><i>□</i><i>×</i></span></div><div class="section-inner"><div class="page-heading commission-heading"><div class="overline">✦ COMMISSION DESK ✦</div><h1>COMMISSION <em>INFO</em></h1></div><p class="section-lead">COMMISSION DETAILS, AVAILABILITY, AND ORDERING INFORMATION WILL GO HERE.</p><div class="wide-art-slot large-art-slot">COMMISSION EXAMPLES / BANNER<br>GO HERE<small>commission-banner.png</small></div><div class="service-grid"><article class="subpanel"><small>01 / TYPE</small><h2>COMMISSION TYPE</h2><p>ADD A DESCRIPTION, PRICE, AND WHAT IS INCLUDED.</p><span class="status-tag">PRICE / DETAILS</span></article><article class="subpanel"><small>02 / TYPE</small><h2>COMMISSION TYPE</h2><p>ADD A DESCRIPTION, PRICE, AND WHAT IS INCLUDED.</p><span class="status-tag">PRICE / DETAILS</span></article><article class="subpanel"><small>03 / ORDER</small><h2>HOW TO ORDER</h2><p>ADD THE ORDER PROCESS AND THE CLIENT’S OFFICIAL CONTACT LINK.</p><span class="status-tag">ORDER INFO</span></article></div></div></div>
+        </section>
+
+        <section class="page-content" data-page="shop" hidden>
+          <div class="section-window module"><div class="window-head"><span>SHOP / CATALOGUE</span><span class="window-buttons"><i>−</i><i>□</i><i>×</i></span></div><div class="section-inner"><div class="page-heading shop-heading"><div class="overline">✦ SHOP CATALOGUE ✦</div><h1>SHOP <em>ITEMS</em></h1></div><p class="section-lead">A LITTLE CATALOGUE FOR THE SHOP. PRODUCT DETAILS AND OFFICIAL PURCHASE LINKS CAN BE ADDED HERE.</p><div class="wide-art-slot shop-banner large-art-slot">SHOP BANNER / FEATURED ART<br>GOES HERE<small>shop-banner.png</small></div><div class="product-grid"><article class="product-tile"><div class="product-art large-art-slot">PRODUCT IMAGE 01<small>product-01.png</small></div><h2>ITEM NAME</h2><p>PRODUCT DESCRIPTION / DETAILS</p><div><span>PRICE HERE</span><span class="purchase-placeholder">PURCHASE LINK TO BE ADDED</span></div></article><article class="product-tile"><div class="product-art large-art-slot">PRODUCT IMAGE 02<small>product-02.png</small></div><h2>ITEM NAME</h2><p>PRODUCT DESCRIPTION / DETAILS</p><div><span>PRICE HERE</span><span class="purchase-placeholder">PURCHASE LINK TO BE ADDED</span></div></article><article class="product-tile"><div class="product-art large-art-slot">PRODUCT IMAGE 03<small>product-03.png</small></div><h2>ITEM NAME</h2><p>PRODUCT DESCRIPTION / DETAILS</p><div><span>PRICE HERE</span><span class="purchase-placeholder">PURCHASE LINK TO BE ADDED</span></div></article></div></div></div>
+        </section>
+
+        <section class="page-content" data-page="tos" hidden>
+          <div class="section-window module"><div class="window-head"><span>TERMS OF SERVICE / HELP FILE</span><span class="window-buttons"><i>−</i><i>□</i><i>×</i></span></div><div class="section-inner"><div class="page-heading terms-heading"><div class="overline">✦ PLEASE READ BEFORE ORDERING ✦</div><h1>TERMS OF <em>SERVICE</em></h1></div><p class="section-lead">THE CREATOR’S OFFICIAL TERMS WILL BE ADDED HERE.</p><div class="terms-list"><article><b>01 / PAYMENT</b><p>ADD THE APPROVED PAYMENT METHODS, TIMING, AND FEES.</p></article><article><b>02 / REFUNDS & CANCELLATIONS</b><p>ADD THE CREATOR’S REFUND AND CANCELLATION POLICY.</p></article><article><b>03 / REVISIONS & DEADLINES</b><p>ADD REVISION LIMITS, EXPECTED TIMELINE, AND UPDATE POLICY.</p></article><article><b>04 / USAGE & COPYRIGHT</b><p>ADD PERSONAL OR COMMERCIAL USE RULES AND CREDIT REQUIREMENTS.</p></article><article><b>05 / OTHER NOTES</b><p>ADD ANY OTHER APPROVED CONDITIONS OR RESTRICTIONS.</p></article></div></div></div>
+        </section>
+
+        <section class="page-content" data-page="contact" hidden>
+          <div class="section-window module"><div class="window-head"><span>CONTACT / MESSAGE CENTER</span><span class="window-buttons"><i>−</i><i>□</i><i>×</i></span></div><div class="section-inner"><div class="page-heading contact-heading"><div class="overline">✦ SAY HELLO ✦</div><h1>CONTACT <em>INFO</em></h1></div><p class="section-lead">OFFICIAL CONTACT CHANNELS AND RESPONSE DETAILS WILL BE ADDED HERE.</p><div class="wide-art-slot large-art-slot">CONTACT BANNER / DECORATION<br>GOES HERE<small>contact-banner.png</small></div><div class="contact-grid"><article class="subpanel"><small>01 / SOCIAL</small><h2>INSTAGRAM</h2><p>ADD THE CLIENT’S CONFIRMED PROFILE LINK.</p></article><article class="subpanel"><small>02 / INQUIRIES</small><h2>EMAIL / COMMISSIONS</h2><p>ADD THE CLIENT’S PREFERRED CONTACT METHOD.</p></article><article class="subpanel"><small>03 / RESPONSE TIME</small><h2>WHEN TO EXPECT A REPLY</h2><p>ADD AN APPROVED RESPONSE TIME OR AVAILABILITY NOTE.</p></article></div></div></div>
+        </section>
+
+        <section class="page-content" data-page="feedback" hidden>
+          <div class="section-window module"><div class="window-head"><span>FEEDBACK / MESSAGE WINDOW</span><span class="window-buttons"><i>−</i><i>□</i><i>×</i></span></div><div class="section-inner"><div class="page-heading feedback-heading"><div class="overline">✦ OPTIONAL CLIENT SECTION ✦</div><h1>FEEDBACK <em>BOX</em></h1></div><p class="section-lead">A PLACE FOR VISITOR COMMENTS OR CUSTOMER FEEDBACK. THE CLIENT CAN DECIDE WHETHER TO KEEP THIS PAGE.</p><div class="feedback-preview"><div class="feedback-label"><span>NEW MESSAGE</span><span>● ● ●</span></div><div class="feedback-paper"><b>YOUR MESSAGE HERE</b><p>FEEDBACK FORM AND PRIVACY DETAILS TO BE ADDED IF APPROVED.</p><div class="feedback-lines"><i></i><i></i><i></i></div><span class="pending-stamp">SUBMISSION SETUP PENDING</span></div></div></div></div>
+        </section>
+      </section>
+
+      <aside class="right-rail">
+        <section class="clock-module module" aria-label="Live local clock">
+          <div class="module-head"><span>SYSTEM CLOCK</span><button id="clockFormatToggle" type="button" aria-pressed="false">24H</button></div>
+          <div class="clock-widget">
+            <div class="analog-clock" aria-hidden="true"><span class="clock-tick tick-12"></span><span class="clock-tick tick-3"></span><span class="clock-tick tick-6"></span><span class="clock-tick tick-9"></span><i class="clock-hand clock-hour" id="clockHour"></i><i class="clock-hand clock-minute" id="clockMinute"></i><i class="clock-hand clock-second" id="clockSecond"></i><b></b></div>
+            <div class="clock-readout"><time id="clockDisplay">--:--</time><span id="clockDate">LOADING DATE</span></div>
+          </div>
+        </section>
+        <section class="banner-module module"><div class="module-head"><span>YOUR BANNER</span><span>✦</span></div><div class="banner-slot">BANNER / IMAGE<br>GOES HERE</div></section>
+        <section class="links-module module"><div class="module-head"><span>QUICK LINKS</span><span>03</span></div><span>LINK TITLE HERE</span><span>LINK TITLE HERE</span><span>LINK TITLE HERE</span><span>LINK TITLE HERE</span></section>
+        <section class="status-module module"><div class="module-head"><span>STATUS</span><span class="live-led"></span></div><div class="status-screen"><b>STATUS TEXT</b><span>MESSAGE GOES HERE</span><small>MOOD / INFO</small></div></section>
+      </aside>
+    </div>
+    <footer class="site-footer"><span>Created by Meownii</span><span>HOME / MAIN PAGE</span><span>♥</span></footer>
+
+    <section class="intro-overlay" id="introOverlay" aria-label="Visual novel introduction">
+      <div class="intro-window" id="introWindow">
+        <div class="intro-titlebar"><span>✦　INTRODUCTION</span><button id="skipIntro">SKIP ▶▶</button></div>
+        <div class="vn-stage">
+          <div class="character-glow"></div>
+          <div class="character-art"><span>CHARACTER ART GOES HERE</span><small>character.png</small></div>
+          <div class="dialogue-panel" id="dialoguePanel">
+            <div class="speaker-tab" id="speakerTab">CHARACTER NAME</div>
+            <p id="dialogueText"></p>
+            <button id="advanceDialogue" aria-label="Advance dialogue">▼</button>
+          </div>
+          <span class="click-hint" id="clickHint">CLICK ANYWHERE TO CONTINUE</span>
+        </div>
+      </div>
+    </section>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
