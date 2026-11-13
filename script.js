@@ -74,6 +74,15 @@ const pages = [...document.querySelectorAll('.page-content[data-page]')];
 const pagePath = document.querySelector('#pagePath');
 const footerPath = document.querySelector('.site-footer span:nth-child(2)');
 
+// Keep the desktop side widgets open on wide screens and tucked into a tray on phones.
+const widgetTray = document.querySelector('.mobile-widgets');
+const phoneLayout = window.matchMedia('(max-width: 600px)');
+function syncWidgetTray() {
+  if (widgetTray) widgetTray.open = !phoneLayout.matches;
+}
+syncWidgetTray();
+phoneLayout.addEventListener?.('change', syncWidgetTray);
+
 function showPage(name) {
   pages.forEach(page => {
     const current = page.dataset.page === name;
