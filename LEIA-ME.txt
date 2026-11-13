@@ -16,16 +16,15 @@ future images can display with more detail. Replace each marked image area with
 the corresponding client-provided art.
 
 The music panel is a visual demo with an animated disc and equalizer. Its pause
-button pauses the animation. The graphic equalizer beneath it has working sliders,
-reset, and shuffle controls that reshape its spectrum preview. No audio file is
-included yet.
+button pauses the animation. No audio file is included yet.
 
 The compact system bar has a live clock. The clock widget also has analog hands
 and a working 12-hour / 24-hour display switch.
 
 The site keeps its approved layout with a Frutiger Aero-inspired palette:
 bright blue glass surfaces and coral-red, yellow, and green accents. The logo
-has been removed from the header to make room for the character art and dashboard.
+has been removed from the header. Panels and image slots use varied, rounded
+silhouettes to make the dashboard feel less rigid.
 The subtle blue checkerboard remains outside the main window. Section layouts stay
 text-led without unrelated decorative photos. The profile rail has a retro phone
 with a placeholder for the client-provided character image. The banner stays

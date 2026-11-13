@@ -93,39 +93,12 @@ function showPage(name) {
 navItems.forEach(button => button.addEventListener('click', () => showPage(button.dataset.section)));
 
 const player = document.querySelector('.music-console');
-const spectrumModule = document.querySelector('.spectrum-module');
 document.querySelector('#playToggle').addEventListener('click', event => {
   const paused = player.classList.toggle('paused');
-  spectrumModule?.classList.toggle('paused', paused);
   event.currentTarget.textContent = paused ? '▶' : 'Ⅱ';
   event.currentTarget.setAttribute('aria-label', paused ? 'Resume music preview' : 'Pause music preview');
   document.querySelector('.transport span').textContent = paused ? 'PAUSE' : 'DEMO';
 });
-
-// The equalizer sliders reshape the graph preview; reset and shuffle are real controls.
-const spectrumSliders = [...document.querySelectorAll('.spectrum-bands input')];
-const spectrumLine = document.querySelector('#spectrumLine');
-const spectrumFill = document.querySelector('#spectrumFill');
-function updateSpectrum() {
-  if (!spectrumLine || !spectrumFill) return;
-  const points = spectrumSliders.map((slider, index) => {
-    const x = index * (320 / (spectrumSliders.length - 1));
-    const y = 78 - (Number(slider.value) * 0.64);
-    return `${x},${y.toFixed(1)}`;
-  });
-  spectrumLine.setAttribute('points', points.join(' '));
-  spectrumFill.setAttribute('points', `0,91 ${points.join(' ')} 320,91`);
-}
-spectrumSliders.forEach(slider => slider.addEventListener('input', updateSpectrum));
-document.querySelector('#resetSpectrum')?.addEventListener('click', () => {
-  spectrumSliders.forEach(slider => { slider.value = '50'; });
-  updateSpectrum();
-});
-document.querySelector('#shuffleSpectrum')?.addEventListener('click', () => {
-  spectrumSliders.forEach(slider => { slider.value = String(18 + Math.floor(Math.random() * 75)); });
-  updateSpectrum();
-});
-updateSpectrum();
 
 // Live analog/digital clock, with a switchable 12-hour and 24-hour readout.
 const clockDisplay = document.querySelector('#clockDisplay');
