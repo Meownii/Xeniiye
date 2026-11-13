@@ -26,7 +26,10 @@
         <button class="dock-item" data-section="feedback" aria-label="Feedback"><span class="dock-icon feedback-icon"><i></i></span><small>feedback</small></button>
       </nav>
 
-      <aside class="left-rail">
+      <details class="mobile-widgets" open>
+        <summary><span>SIDE WIDGETS <small>PLAYER · PROFILE · CLOCK</small></span><b aria-hidden="true">+</b></summary>
+        <div class="widget-columns">
+          <aside class="left-rail">
         <section class="signal-module module">
           <div class="module-head"><span>NOW PLAYING</span><span class="live-led"></span></div>
           <div class="signal-screen"><span class="screen-title">AUDIO SIGNAL</span><div class="waveform"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>TRACK TITLE HERE</small></div>
@@ -40,6 +43,21 @@
         </section>
         <div class="rail-chip"><span class="chip-dot"></span> CURRENTLY ONLINE</div>
       </aside>
+
+          <aside class="right-rail">
+        <section class="clock-module module" aria-label="Live local clock">
+          <div class="module-head"><span>SYSTEM CLOCK</span><button id="clockFormatToggle" type="button" aria-pressed="false">24H</button></div>
+          <div class="clock-widget">
+            <div class="analog-clock" aria-hidden="true"><span class="clock-tick tick-12"></span><span class="clock-tick tick-3"></span><span class="clock-tick tick-6"></span><span class="clock-tick tick-9"></span><i class="clock-hand clock-hour" id="clockHour"></i><i class="clock-hand clock-minute" id="clockMinute"></i><i class="clock-hand clock-second" id="clockSecond"></i><b></b></div>
+            <div class="clock-readout"><time id="clockDisplay">--:--</time><span id="clockDate">LOADING DATE</span></div>
+          </div>
+        </section>
+        <section class="banner-module module"><div class="module-head"><span>YOUR BANNER</span><span>✦</span></div><div class="banner-slot">BANNER / IMAGE<br>GOES HERE</div></section>
+        <section class="links-module module"><div class="module-head"><span>QUICK LINKS</span><span>03</span></div><span>LINK TITLE HERE</span><span>LINK TITLE HERE</span><span>LINK TITLE HERE</span><span>LINK TITLE HERE</span></section>
+        <section class="status-module module"><div class="module-head"><span>STATUS</span><span class="live-led"></span></div><div class="status-screen"><b>STATUS TEXT</b><span>MESSAGE GOES HERE</span><small>MOOD / INFO</small></div></section>
+      </aside>
+        </div>
+      </details>
 
       <section class="home-area" id="pageView">
         <div class="main-toolbar"><span>⌂</span><span>FILE</span><span>EDIT</span><span>VIEW</span><span id="pagePath">HOME / MAIN PAGE</span><button id="replayIntro">REPLAY INTRO</button></div>
@@ -82,19 +100,6 @@
           <div class="section-window module"><div class="window-head"><span>FEEDBACK / MESSAGE WINDOW</span><span class="window-buttons"><i>−</i><i>□</i><i>×</i></span></div><div class="section-inner"><div class="page-heading feedback-heading"><div class="overline">✦ OPTIONAL CLIENT SECTION ✦</div><h1>FEEDBACK <em>BOX</em></h1></div><p class="section-lead">A PLACE FOR VISITOR COMMENTS OR CUSTOMER FEEDBACK. THE CLIENT CAN DECIDE WHETHER TO KEEP THIS PAGE.</p><div class="feedback-preview"><div class="feedback-label"><span>NEW MESSAGE</span><span>● ● ●</span></div><div class="feedback-paper"><b>YOUR MESSAGE HERE</b><p>FEEDBACK FORM AND PRIVACY DETAILS TO BE ADDED IF APPROVED.</p><div class="feedback-lines"><i></i><i></i><i></i></div><span class="pending-stamp">SUBMISSION SETUP PENDING</span></div></div></div></div>
         </section>
       </section>
-
-      <aside class="right-rail">
-        <section class="clock-module module" aria-label="Live local clock">
-          <div class="module-head"><span>SYSTEM CLOCK</span><button id="clockFormatToggle" type="button" aria-pressed="false">24H</button></div>
-          <div class="clock-widget">
-            <div class="analog-clock" aria-hidden="true"><span class="clock-tick tick-12"></span><span class="clock-tick tick-3"></span><span class="clock-tick tick-6"></span><span class="clock-tick tick-9"></span><i class="clock-hand clock-hour" id="clockHour"></i><i class="clock-hand clock-minute" id="clockMinute"></i><i class="clock-hand clock-second" id="clockSecond"></i><b></b></div>
-            <div class="clock-readout"><time id="clockDisplay">--:--</time><span id="clockDate">LOADING DATE</span></div>
-          </div>
-        </section>
-        <section class="banner-module module"><div class="module-head"><span>YOUR BANNER</span><span>✦</span></div><div class="banner-slot">BANNER / IMAGE<br>GOES HERE</div></section>
-        <section class="links-module module"><div class="module-head"><span>QUICK LINKS</span><span>03</span></div><span>LINK TITLE HERE</span><span>LINK TITLE HERE</span><span>LINK TITLE HERE</span><span>LINK TITLE HERE</span></section>
-        <section class="status-module module"><div class="module-head"><span>STATUS</span><span class="live-led"></span></div><div class="status-screen"><b>STATUS TEXT</b><span>MESSAGE GOES HERE</span><small>MOOD / INFO</small></div></section>
-      </aside>
     </div>
     <footer class="site-footer"><span>Created by Meownii</span><span>HOME / MAIN PAGE</span><span>♥</span></footer>
 
