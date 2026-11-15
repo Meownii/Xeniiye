@@ -4,7 +4,7 @@ A responsive artist-shop site for GitHub Pages. Pages are switched client-side s
 
 ## Add music
 
-Place an MP3 at `assets/music.mp3`. The player includes play/pause, volume, progress seeking, and repeat. It starts only after a visitor presses Play. No audio file is included yet.
+Place an MP3 at `assets/music.mp3`. The player includes play/pause, volume, progress seeking, and repeat. It starts only after a visitor presses Play. Change the audio element's `data-track-title` value in `index.html` to display the song title. No audio file is included yet.
 
 ## Content awaiting approval
 

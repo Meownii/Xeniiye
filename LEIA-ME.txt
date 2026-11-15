@@ -3,10 +3,10 @@ XENIIYE — MEOWNII'S CREATIVE SHOP
 The site uses a small fixed-width editorial layout inspired by personal artist sites and web portals from the 2000s. The desktop sidebar moves above the content on phones. Navigation switches pages without reloading, and the music deck stays available while changing sections.
 
 MUSIC
-Add a licensed MP3 named music.mp3 to the assets folder. The player will show the track and enable Play, Pause, Repeat, Volume, and seek controls when the file is available. It does not autoplay; visitors start playback themselves. No MP3 is included in this repository yet.
+Add a licensed MP3 named music.mp3 to the assets folder. The player will show the track and enable Play, Pause, Repeat, Volume, and seek controls when the file is available. Edit the audio element's data-track-title value in index.html to set the displayed song title. It does not autoplay; visitors start playback themselves. No MP3 is included in this repository yet.
 
 CONTENT
-The current About introduction and public contact links are included. Commission rates, final service details, Terms wording, product listings, artwork, and testimonials remain placeholders until approved information and art are supplied. Image areas are labeled IMAGE.
+The current About introduction and public contact links are included. Commission rates, final service details, Terms wording, product listings, artwork, and testimonials remain placeholders until approved information and art are supplied. Image placeholders are labeled IMAGE.
 
 ASSETS
 The existing Xeniiye logo, retro computer and camera illustrations, navigation icons, and phone/device illustrations are used. No generated artwork was added.

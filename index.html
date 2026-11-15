@@ -36,7 +36,7 @@
           <div class="deck-top"><img src="assets/89119.webp" alt="" width="50" height="50"><span>MY LITTLE<br>PLAYER</span><i class="deck-led"></i></div>
           <p class="track-name" id="trackTitle">Add your MP3</p>
           <p class="track-hint" id="trackHint">Place it at <code>assets/music.mp3</code></p>
-          <audio id="siteAudio" preload="metadata" loop></audio>
+          <audio id="siteAudio" data-track-title="music.mp3" preload="metadata" loop></audio>
           <div class="deck-controls"><button id="playButton" type="button" aria-label="Play music" disabled>▶</button><button id="pauseButton" type="button" aria-label="Pause music" disabled>Ⅱ</button><button id="repeatButton" type="button" aria-label="Repeat track" aria-pressed="true" disabled>↻</button><span class="time-readout" id="timeReadout">--:--</span></div>
           <label class="range-row"><span>VOL</span><input id="volumeControl" type="range" min="0" max="1" step="0.01" value="0.55" aria-label="Volume"></label>
           <label class="progress-row"><span class="sr-only">Track progress</span><input id="progressControl" type="range" min="0" max="1000" value="0" aria-label="Track progress" disabled></label>
@@ -52,8 +52,8 @@
           <section class="page-content is-visible" data-page="home">
             <section class="welcome-banner">
               <div class="banner-copy"><span class="handwritten">Welcome to</span><h1>Xeniiye</h1><p>A small creative shop by Meownii — art, commissions, and personal websites made with love.</p><button class="banner-button" data-go="commissions">See commissions <span>›</span></button></div>
-              <div class="banner-scene" data-parallax><div class="scene-cloud cloud-a"></div><div class="scene-cloud cloud-b"></div><div class="scene-sun"></div><div class="scene-wave wave-a"></div><div class="scene-wave wave-b"></div><div class="hero-art"><span>IMAGE</span><small>MAIN ILLUSTRATION</small></div><img class="scene-camera" src="assets/89113.png" alt="Vintage camera illustration"></div>
-              <div class="banner-caption">A LITTLE CORNER OF THE INTERNET <span>NO. 01</span></div>
+              <div class="banner-scene" data-parallax><div class="scene-cloud cloud-a"></div><div class="scene-cloud cloud-b"></div><div class="scene-sun"></div><div class="scene-wave wave-a"></div><div class="scene-wave wave-b"></div><div class="hero-art"><span>IMAGE</span></div><img class="scene-camera" src="assets/89113.png" alt="Vintage camera illustration"></div>
+              <div class="banner-caption">A LITTLE CORNER OF THE INTERNET</div>
             </section>
             <section class="home-intro">
               <div class="intro-heading"><span class="handwritten">Make yourself at home</span><h2>Art, ideas &amp; little projects</h2></div>
@@ -66,14 +66,14 @@
           <section class="page-content" data-page="about" hidden>
             <article class="editorial-page about-page">
               <header class="section-header"><span class="handwritten">A little about the artist</span><h1>About Me</h1><p>Meet the person behind the shop.</p></header>
-              <div class="about-layout"><div class="portrait-paper"><div class="portrait-image"><span>IMAGE</span><small>PORTRAIT / AVATAR</small></div><img src="assets/89122.png" alt="Vintage phone frame" class="portrait-phone"></div><div class="bio-copy"><p class="dropcap">I’m Meownii, a digital artist and web creator. I make art and custom websites with a personal, playful feel for artists, shops, streamers, and creative projects.</p><p>More about the creator, their process, and the things they love can be added here.</p><div class="bio-signature">Meownii <span>digital art · web design</span></div></div></div>
+              <div class="about-layout"><div class="portrait-paper"><div class="portrait-image"><span>IMAGE</span></div><img src="assets/89122.png" alt="Vintage phone frame" class="portrait-phone"></div><div class="bio-copy"><p class="dropcap">I’m Meownii, a digital artist and web creator. I make art and custom websites with a personal, playful feel for artists, shops, streamers, and creative projects.</p><p>More about the creator, their process, and the things they love can be added here.</p><div class="bio-signature">Meownii <span>digital art · web design</span></div></div></div>
             </article>
           </section>
 
           <section class="page-content" data-page="commissions" hidden>
             <article class="editorial-page commissions-page">
               <header class="section-header"><span class="handwritten">Let’s make something together</span><h1>Commissions</h1><p>Art and personal website commissions.</p></header>
-              <div class="commission-layout"><div class="commission-poster"><div class="commission-art"><span>IMAGE</span><small>EXAMPLES OF MY WORK</small></div><img src="assets/89113.png" alt="Vintage camera" class="poster-camera"><div class="poster-stamp">OPEN<br>SOON</div></div><div class="commission-copy"><h2>Commission info</h2><p>Service details, current prices, examples, and availability will be added here.</p><div class="service-list"><div><span>01</span><b>Art commissions</b><i>Details &amp; prices to be added</i></div><div><span>02</span><b>Personal websites</b><i>Details &amp; prices to be added</i></div></div><button class="line-button" data-go="contact">Ask about a project <span>→</span></button></div></div>
+              <div class="commission-layout"><div class="commission-poster"><div class="commission-art"><span>IMAGE</span></div><img src="assets/89113.png" alt="Vintage camera" class="poster-camera"><div class="poster-stamp">ART<br>+ WEB</div></div><div class="commission-copy"><h2>Commission info</h2><p>Service details, current prices, examples, and availability will be added here.</p><div class="service-list"><div><span>01</span><b>Art commissions</b><i>Details &amp; prices to be added</i></div><div><span>02</span><b>Personal websites</b><i>Details &amp; prices to be added</i></div></div><button class="line-button" data-go="contact">Ask about a project <span>→</span></button></div></div>
             </article>
           </section>
 
@@ -81,14 +81,14 @@
             <article class="editorial-page shop-page">
               <header class="section-header"><span class="handwritten">A few good things</span><h1>Shop</h1><p>Browse available products and services.</p></header>
               <div class="shop-intro"><img src="assets/89118.png" alt="Retro computer illustration"><p>The catalogue is being prepared. Product art, descriptions, prices, and purchase links will appear here when ready.</p></div>
-              <div class="shop-shelf"><div class="shelf-item item-blue"><div class="shelf-image"><span>IMAGE</span></div><span class="item-caption">ITEM ART / 01</span></div><div class="shelf-item item-yellow"><div class="shelf-image"><span>IMAGE</span></div><span class="item-caption">ITEM ART / 02</span></div><div class="shelf-item item-green"><div class="shelf-image"><span>IMAGE</span></div><span class="item-caption">ITEM ART / 03</span></div></div>
+              <div class="shop-shelf"><div class="shelf-item item-blue"><div class="shelf-image"><span>IMAGE</span></div></div><div class="shelf-item item-yellow"><div class="shelf-image"><span>IMAGE</span></div></div><div class="shelf-item item-green"><div class="shelf-image"><span>IMAGE</span></div></div></div>
             </article>
           </section>
 
           <section class="page-content" data-page="terms" hidden>
             <article class="editorial-page terms-page">
-              <header class="section-header"><span class="handwritten">Please read before ordering</span><h1>Terms</h1><p>The official terms will be posted here before orders open.</p></header>
-              <div class="terms-note"><img src="assets/89116.png" alt="A small retro computer window"><p>Payment, turnaround time, revisions, refunds, and usage rules will be listed here once the final terms are ready.</p></div>
+              <header class="section-header"><span class="handwritten">Please read before ordering</span><h1>Terms</h1><p>The official terms and current policies will be added here.</p></header>
+              <div class="terms-note"><img src="assets/89116.png" alt="A small retro computer window"><p>Payment, turnaround time, revisions, refunds, and usage rules will be listed here once the approved terms are ready.</p></div>
               <div class="terms-list"><div><span>01</span><b>Payment &amp; refunds</b></div><div><span>02</span><b>Timeline &amp; revisions</b></div><div><span>03</span><b>Usage &amp; credit</b></div><div><span>04</span><b>Requests &amp; boundaries</b></div></div>
             </article>
           </section>
