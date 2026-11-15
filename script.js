@@ -76,7 +76,7 @@ const footerPath = document.querySelector('.site-footer span:nth-child(2)');
 
 // Keep the desktop side widgets open on wide screens and tucked into a tray on phones.
 const widgetTray = document.querySelector('.mobile-widgets');
-const phoneLayout = window.matchMedia('(max-width: 600px)');
+const phoneLayout = window.matchMedia('(max-width: 620px)');
 function syncWidgetTray() {
   if (widgetTray) widgetTray.open = !phoneLayout.matches;
 }

@@ -29,22 +29,30 @@
         <button class="dock-item" data-section="feedback" aria-label="Feedback"><span class="dock-icon image-icon"><img src="assets/nav-messages.webp" alt="" loading="lazy"></span><small>feedback</small></button>
       </nav>
 
+
+
+      <section class="home-area" id="pageView">
+        <div class="main-toolbar"><span>⌂</span><span>FILE</span><span>EDIT</span><span>VIEW</span><span id="pagePath">HOME / MAIN PAGE</span><button id="replayIntro">REPLAY INTRO</button></div>
+
+        <section class="page-content active" data-page="home">
+          <section class="music-console module">
+            <div class="console-top"><span>✦ MEDIA PLAYER / DEMO MODE</span><div class="mini-eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div class="console-main"><div class="cd-player" aria-hidden="true"><span></span></div><div class="song-copy"><small>NOW PLAYING</small><strong>TRACK TITLE GOES HERE</strong><span>ARTIST NAME / ALBUM</span><div class="audio-track"><i></i></div></div><div class="transport"><button id="playToggle" aria-label="Pause music preview">Ⅱ</button><span>DEMO</span></div></div>
+          </section>
+          <section class="home-window module">
+            <div class="window-head"><span>HOME / MAIN PAGE</span><span class="window-buttons"><i>−</i><i>□</i><i>×</i></span></div>
+            <div class="home-content"><div class="home-copy"><div class="overline">✦ HOME / INTRODUCTION ✦</div><h1>MAIN TITLE<br><em>GOES HERE</em></h1><p class="intro-placeholder">ADD A SHORT INTRODUCTION, SHOP DESCRIPTION, OR A MESSAGE FOR VISITORS.</p><div class="home-links"><span>SOCIAL LINK</span><span>SHOP UPDATE</span><span>MORE INFO</span></div></div><div class="hero-art large-art-slot" aria-label="Image placeholder">IMAGE</div></div>
+            <div class="home-status"><span><i></i> SYSTEM READY</span><span>VISITOR MESSAGE / INFO</span></div>
+          </section>
       <details class="mobile-widgets" open>
-        <summary><span>SIDE WIDGETS <small>PLAYER · PROFILE · CLOCK</small></span><b aria-hidden="true">+</b></summary>
+        <summary><span>SIDE WIDGETS <small>PROFILE · CLOCK · LINKS</small></span><b aria-hidden="true">+</b></summary>
         <div class="widget-columns">
           <aside class="left-rail">
-        <section class="signal-module module">
-          <div class="module-head"><span>NOW PLAYING</span><span class="live-led"></span></div>
-          <div class="signal-screen"><span class="screen-title">AUDIO SIGNAL</span><div class="waveform"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>TRACK TITLE HERE</small></div>
-          <div class="knob-row"><span class="knob"></span><span class="knob"></span><span class="knob"></span><span class="meter">VOL<br>08</span></div>
-          <div class="rail-note"><b>ARTIST / ALBUM</b><span>music info goes here</span></div>
-        </section>
         <section class="profile-module module">
           <div class="module-head"><span>PROFILE</span><span>01</span></div>
           <div class="phone-widget" aria-label="Character art shown inside a retro mobile phone"><div class="phone-frame"><div class="phone-screen-slot"><span>IMAGE</span></div><img src="assets/89122.png" alt="Decorated retro mobile phone frame"></div></div>
-          <p class="micro-placeholder">CHARACTER DISPLAY / IMAGE TO BE ADDED</p>
+          
         </section>
-        <div class="rail-chip"><span class="chip-dot"></span> CURRENTLY ONLINE</div>
       </aside>
 
           <aside class="right-rail">
@@ -61,20 +69,6 @@
       </aside>
         </div>
       </details>
-
-      <section class="home-area" id="pageView">
-        <div class="main-toolbar"><span>⌂</span><span>FILE</span><span>EDIT</span><span>VIEW</span><span id="pagePath">HOME / MAIN PAGE</span><button id="replayIntro">REPLAY INTRO</button></div>
-
-        <section class="page-content active" data-page="home">
-          <section class="music-console module">
-            <div class="console-top"><span>✦ MEDIA PLAYER / DEMO MODE</span><div class="mini-eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-            <div class="console-main"><div class="cd-player" aria-hidden="true"><span></span></div><div class="song-copy"><small>NOW PLAYING</small><strong>TRACK TITLE GOES HERE</strong><span>ARTIST NAME / ALBUM</span><div class="audio-track"><i></i></div></div><div class="transport"><button id="playToggle" aria-label="Pause music preview">Ⅱ</button><span>DEMO</span></div></div>
-          </section>
-          <section class="home-window module">
-            <div class="window-head"><span>HOME / MAIN PAGE</span><span class="window-buttons"><i>−</i><i>□</i><i>×</i></span></div>
-            <div class="home-content"><div class="home-copy"><div class="overline">✦ HOME / INTRODUCTION ✦</div><h1>MAIN TITLE<br><em>GOES HERE</em></h1><p class="intro-placeholder">ADD A SHORT INTRODUCTION, SHOP DESCRIPTION, OR A MESSAGE FOR VISITORS.</p><div class="home-links"><span>SOCIAL LINK</span><span>SHOP UPDATE</span><span>MORE INFO</span></div></div><div class="hero-art large-art-slot" aria-label="Image placeholder">IMAGE</div></div>
-            <div class="home-status"><span><i></i> SYSTEM READY</span><span>VISITOR MESSAGE / INFO</span></div>
-          </section>
           <div class="content-row"><section class="text-module module"><div class="module-head"><span>ABOUT / INFO</span><span>PROFILE</span></div><h2>SECTION TITLE</h2><p>ADD A SHORT DESCRIPTION, IMPORTANT INFORMATION, OR A NOTE ABOUT THE SHOP.</p><div class="text-lines"><i></i><i></i><i></i></div></section><section class="update-module module"><div class="module-head"><span>LATEST UPDATE</span><span>02</span></div><small>DATE / MONTH / YEAR</small><h2>UPDATE TITLE GOES HERE</h2><p>ADD NEWS, NEW ITEMS, OR A SHORT ANNOUNCEMENT.</p><div class="update-lights"><i></i><i></i><i></i><span>MORE INFO</span></div></section></div>
           <section class="mini-gallery"><div class="gallery-label">FEATURED WORK / IMAGES</div><div class="gallery-slots"><span>IMAGE</span><span>IMAGE</span><span>IMAGE</span></div></section>
         </section>
