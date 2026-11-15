@@ -95,7 +95,7 @@ function showPage(name) {
     button.setAttribute('aria-current', current ? 'page' : 'false');
   });
   pagePath.textContent = pageNames[name];
-  footerPath.textContent = pageNames[name];
+  if (footerPath) footerPath.textContent = pageNames[name];
   document.title = `${name.toUpperCase()} — Website Preview`;
 }
 
