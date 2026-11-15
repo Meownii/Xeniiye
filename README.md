@@ -1,11 +1,11 @@
-# Xeniiye — Meownii's Creative Shop
+# Shop site template
 
-A responsive artist-shop site for GitHub Pages. Pages are switched client-side so the compact music player can continue through navigation.
+All store copy is intentionally left as short placeholders. Replace each label in index.html and the page content templates in script.js with approved shop details.
 
-## Add music
+## Profile image
 
-Place an MP3 at `assets/music.mp3`. The player includes play/pause, volume, progress seeking, and repeat. It starts only after a visitor presses Play. Change the audio element's `data-track-title` value in `index.html` to display the song title. No audio file is included yet.
+Replace the text inside .phone-screen in index.html with an img element using the chosen image. The image is contained within the phone display using object-fit: cover.
 
-## Content awaiting approval
+## Music
 
-Current commission rates, finalized Terms, product listings, supplied art, and customer feedback remain placeholders. Existing Xeniiye and retro-device artwork and navigation icons are in `assets/`.
+Add the real MP3 at assets/music.mp3. The compact player enables its controls only when the audio can be loaded. Update MUSIC TITLE and ARTIST NAME in script.js. Playback starts only after Play is pressed and continues when the visitor changes pages.
