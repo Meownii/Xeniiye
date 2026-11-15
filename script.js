@@ -23,10 +23,6 @@ function advanceIntro() {
   finishIntro();
 }
 overlay.addEventListener('click', advanceIntro);
-overlay.querySelector('#introWindow').addEventListener('click', event => {
-  if (event.target.closest('button')) return;
-  advanceIntro();
-});
 document.querySelector('#skipIntro').addEventListener('click', event => { event.stopPropagation(); finishIntro(); });
 document.querySelector('#advanceDialogue').addEventListener('click', event => { event.stopPropagation(); advanceIntro(); });
 document.querySelector('#replayIntro').addEventListener('click', beginIntro);
