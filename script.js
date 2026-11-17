@@ -77,7 +77,7 @@ document.addEventListener("click", event => {
   const shortcut = event.target.closest("[data-go]");
   if (nav) showPage(nav.dataset.page);
   if (shortcut) showPage(shortcut.dataset.go);
-  if (event.target.closest(".back-top")) window.scrollTo({top:0,behavior:"smooth"});
+  if (event.target.closest("#replayIntro")) openIntro();
 });
 
 content.innerHTML = pageContent.home;
@@ -152,4 +152,62 @@ progress.addEventListener("input", () => {
   if (Number.isFinite(audio.duration)) audio.currentTime = audio.duration * Number(progress.value) / 1000;
 });
 audio.load();
+
+const introScreen = document.querySelector("#introScreen");
+const introDialogue = document.querySelector("#introDialogue");
+const introHeading = document.querySelector("#introHeading");
+const introLine = document.querySelector("#introLine");
+const introSteps = [
+  {heading:"WELCOME...",line:"INFO INFO INFO"},
+  {heading:"INFO INFO INFO",line:"INFO INFO INFO"},
+  {heading:"INFO INFO INFO",line:"INFO INFO INFO"}
+];
+let introStep = 0;
+let introCloseTimer;
+
+function openIntro() {
+  clearTimeout(introCloseTimer);
+  introStep = 0;
+  introScreen.hidden = false;
+  introScreen.classList.remove("intro-leaving");
+  introScreen.classList.add("intro-visible");
+  updateIntro();
+}
+
+function updateIntro() {
+  const step = introSteps[introStep];
+  introHeading.textContent = step.heading;
+  introLine.textContent = step.line;
+  introDialogue.classList.remove("dialogue-change");
+  requestAnimationFrame(() => introDialogue.classList.add("dialogue-change"));
+}
+
+function advanceIntro() {
+  if (introStep < introSteps.length - 1) {
+    introStep += 1;
+    updateIntro();
+  } else {
+    closeIntro();
+  }
+}
+
+function closeIntro() {
+  introScreen.classList.remove("intro-visible");
+  introScreen.classList.add("intro-leaving");
+  introCloseTimer = window.setTimeout(() => {
+    introScreen.hidden = true;
+    introScreen.classList.remove("intro-leaving");
+  }, reduceMotion ? 0 : 240);
+}
+
+document.querySelector("#introAdvance").addEventListener("click", advanceIntro);
+document.querySelector("#introSkip").addEventListener("click", closeIntro);
+introDialogue.addEventListener("click", event => {
+  if (!event.target.closest("button")) advanceIntro();
+});
+document.addEventListener("keydown", event => {
+  if (introScreen.hidden) return;
+  if (event.key === "Escape") closeIntro();
+  if (event.key === "Enter" && !event.target.closest("button")) advanceIntro();
+});
 

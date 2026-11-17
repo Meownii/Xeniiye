@@ -2,4 +2,8 @@ Personalize este modelo com as informações e imagens aprovadas da loja. Os tex
 
 Para a foto de perfil, substitua o conteúdo de .phone-screen no index.html por uma tag img com o arquivo escolhido. A foto se ajusta à tela do telefone sem distorcer.
 
-Para habilitar o player, coloque o MP3 real em assets/music.mp3. Os controles ficam desativados até que o arquivo carregue. Edite MUSIC TITLE e ARTIST NAME em script.js.
+Os sete botões laterais usam as imagens de assets/nav-*.webp. Substitua cada arquivo para trocar a ilustração sem refazer o botão.
+
+A intro aparece ao abrir o site. CLICK TO CONTINUE avança as falas, SKIP fecha e REPLAY INTRO a abre novamente pelo cabeçalho da janela.
+
+Para habilitar o player, coloque o MP3 real em assets/music.mp3. Os controles ficam desativados até que o arquivo carregue. Edite MUSIC TITLE e ARTIST NAME em index.html.

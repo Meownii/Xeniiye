@@ -7,9 +7,9 @@
   <title>SHOP NAME</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=M+PLUS+1p:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=site-redesign-3">
-  <script src="script.js?v=site-redesign-3" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;600;700&family=Yusei+Magic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=xeniiye-ui-2">
+  <script src="script.js?v=xeniiye-ui-2" defer></script>
 </head>
 <body>
   <div class="site-frame" id="top">
@@ -17,19 +17,18 @@
       <div class="masthead-name">SHOP NAME</div>
       <span class="masthead-separator" aria-hidden="true"></span>
       <div class="masthead-tag">SUBTITLE HERE</div>
-      <div class="masthead-colors" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
     </header>
 
     <div class="layout">
       <aside class="nav-column" aria-label="Main navigation">
         <nav class="site-nav">
-          <button class="nav-link active" type="button" data-page="home" aria-current="page">Home</button>
-          <button class="nav-link" type="button" data-page="about">About</button>
-          <button class="nav-link" type="button" data-page="commissions">Commissions</button>
-          <button class="nav-link" type="button" data-page="shop">Shop</button>
-          <button class="nav-link" type="button" data-page="terms">Terms</button>
-          <button class="nav-link" type="button" data-page="contact">Contact</button>
-          <button class="nav-link" type="button" data-page="feedback">Feedback</button>
+          <button class="nav-link nav-home active" type="button" data-page="home" aria-current="page"><img src="assets/nav-monitor.webp" alt=""><span>Home</span></button>
+          <button class="nav-link nav-about" type="button" data-page="about"><img src="assets/nav-profile.webp" alt=""><span>About</span></button>
+          <button class="nav-link nav-commissions" type="button" data-page="commissions"><img src="assets/nav-camera.webp" alt=""><span>Commissions</span></button>
+          <button class="nav-link nav-shop" type="button" data-page="shop"><img src="assets/nav-cart.webp" alt=""><span>Shop</span></button>
+          <button class="nav-link nav-terms" type="button" data-page="terms"><img src="assets/nav-notebook.webp" alt=""><span>Terms</span></button>
+          <button class="nav-link nav-contact" type="button" data-page="contact"><img src="assets/nav-phone.webp" alt=""><span>Contact</span></button>
+          <button class="nav-link nav-feedback" type="button" data-page="feedback"><img src="assets/nav-messages.webp" alt=""><span>Feedback</span></button>
         </nav>
       </aside>
 
@@ -37,6 +36,7 @@
         <section class="music-player" aria-label="Music player">
           <div class="player-face">
             <div class="player-screen">
+              <div class="player-leds" aria-hidden="true"><i></i><i></i><i></i></div>
               <div class="equalizer" aria-hidden="true">
                 <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
               </div>
@@ -77,10 +77,11 @@
       </aside>
 
       <main class="content-column">
-        <div class="content-topline">
-          <div class="crumb-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="content-topline window-titlebar">
+          <span class="window-app-icon" aria-hidden="true"></span>
           <span id="currentPage">Home</span>
-          <button class="back-top" type="button" aria-label="Back to top">↑</button>
+          <button class="replay-intro" id="replayIntro" type="button">REPLAY INTRO</button>
+          <div class="window-controls" aria-hidden="true"><i>−</i><i>□</i><i>×</i></div>
         </div>
         <div class="page-content" id="pageContent" aria-live="polite"></div>
       </main>
@@ -88,5 +89,21 @@
 
     <footer class="site-footer"><span>Created by Meownii</span></footer>
   </div>
+  <section class="intro-screen intro-visible" id="introScreen" role="dialog" aria-modal="true" aria-labelledby="introHeading">
+    <div class="intro-window">
+      <div class="intro-titlebar"><span>WELCOME...</span><div class="intro-controls" aria-hidden="true"><i>−</i><i>□</i><i>×</i></div></div>
+      <div class="intro-layout">
+        <div class="intro-art"><span>IMAGE HERE</span></div>
+        <div class="intro-dialogue" id="introDialogue">
+          <h1 id="introHeading">WELCOME...</h1>
+          <p id="introLine">INFO INFO INFO</p>
+          <div class="intro-actions">
+            <button class="intro-advance" id="introAdvance" type="button">CLICK TO CONTINUE</button>
+            <button class="intro-skip" id="introSkip" type="button">SKIP</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
